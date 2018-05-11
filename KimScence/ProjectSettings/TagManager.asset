@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Deidara
   - item
+  - field
   layers:
   - Default
   - TransparentFX

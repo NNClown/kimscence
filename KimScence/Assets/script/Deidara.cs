@@ -32,14 +32,6 @@ public class Deidara : MonoBehaviour {
 			relese ();
 		}
 	}
-	//void OnCollisionEnter(Collision col)
-	//{
-	//	Debug.Log (col.transform);
-	//	if (Input.GetKeyDown (KeyCode.C) && bCatch == false) {
-	//		bCatch = true;
-	//
-	//	}
-	//}
 	void OnTriggerStay(Collider col)
 	{
 		if (col.tag == "item") {
@@ -51,6 +43,9 @@ public class Deidara : MonoBehaviour {
 			}
 		}
 	}
+    /// <summary>
+    /// アイテムを落とす
+    /// </summary>
 	void relese()
 	{
 		Item.gameObject.GetComponent<Transform>().position =
@@ -59,6 +54,10 @@ public class Deidara : MonoBehaviour {
 		Item.gameObject.GetComponent<Transform> ().parent = null;
 		bCatch = false;
 	}
+    /// <summary>
+    /// プレイヤーを持っているかどうかを知らせてもらう
+    /// </summary>
+    /// <param name="pairuflg"></param>
 	public void Pairuda(bool pairuflg)
 	{
 		bPairuda = pairuflg;
